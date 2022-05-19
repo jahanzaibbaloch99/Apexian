@@ -1,6 +1,9 @@
 import React from 'react';
 import {Text, TouchableOpacity, StyleSheet, Image, View} from 'react-native';
 import Colors from '../Themes/Colors';
+import LinearGradient from 'react-native-linear-gradient';
+import CommonStyles from '../CommonStyles';
+
 const AppButton = ({
   textStyle,
   onPress,
@@ -9,40 +12,55 @@ const AppButton = ({
   disabled,
   iconOnly,
   reverted,
-  gradientColor,
+  gradientColor = Colors.primaryGradient,
   touchStyle,
+  start = {x: 0.5, y: 0.5},
+  end = {x: 0.5, y: 0.5},
 }) => (
   <TouchableOpacity
-    activeOpacity={0.6}
+    activeOpacity={0.5}
     disabled={disabled}
     onPress={onPress}
-    style={[touchStyle]}>
-    <View
-      style={[
-        styles.appButtonContainer,
-        {opacity: disabled ? 0.7 : 1, backgroundColor: Colors.primary},
-        containerStyles,
-      ]}>
-      {iconOnly ? (
-        <Image
-          source={iconOnly}
-          style={{...styles.appButtonText, height: 20, width: 20}}
-        />
-      ) : (
-        <Text style={[styles.appButtonText, textStyle]}>{children}</Text>
-      )}
-    </View>
+    style={[
+      touchStyle,
+      {opacity: disabled ? 0.7 : 1, overflow: 'hidden', borderRadius: 20},
+    ]}>
+    <LinearGradient
+      locations={[0.07, 0.92]}
+      // angleCenter={{x: 0.6, y: 0.2}}
+      useAngle={true}
+      angle={260}
+      colors={Colors.primaryGradient}>
+      <View style={[styles.appButtonContainer, containerStyles]}>
+        <View>
+          {iconOnly ? (
+            <Image
+              source={iconOnly}
+              style={{...styles.appButtonText, height: 20, width: 20}}
+            />
+          ) : (
+            <Text
+              style={[
+                styles.appButtonText,
+                textStyle,
+                CommonStyles.fontRegular400,
+              ]}>
+              {children}
+            </Text>
+          )}
+        </View>
+      </View>
+    </LinearGradient>
   </TouchableOpacity>
 );
 
 const styles = StyleSheet.create({
   appButtonContainer: {
-    paddingVertical: 12,
+    paddingVertical: 15,
     paddingHorizontal: 15,
-    borderRadius: 8,
   },
   appButtonText: {
-    fontSize: 16,
+    fontSize: 18,
     color: '#fff',
     alignSelf: 'center',
   },
