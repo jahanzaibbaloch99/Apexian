@@ -62,11 +62,11 @@ const Step1 = () => {
               <Text style={{color: '#959799'}}>Risk Are</Text>
             </View>
             <View style={{marginTop: 10, paddingHorizontal: 10}}>
-              <Text style={{color: 'white'}}>You Lost It.</Text>
+              <Text style={{color: 'white'}}>• You Lost It.</Text>
               <Text style={{color: 'white'}}>
-                You Forget where you put this
+                • You Forget where you put this
               </Text>
-              <Text style={{color: 'white'}}>Someone else find it</Text>
+              <Text style={{color: 'white'}}>• Someone else find it</Text>
             </View>
           </View>
           <View>
@@ -74,8 +74,8 @@ const Step1 = () => {
               <Text style={{color: '#959799'}}>Solution</Text>
             </View>
             <View style={{marginTop: 10, paddingHorizontal: 10}}>
-              <Text style={{color: 'white'}}>Store in Safe Place.</Text>
-              <Text style={{color: 'white'}}>Remind this code well.</Text>
+              <Text style={{color: 'white'}}>• Store in Safe Place.</Text>
+              <Text style={{color: 'white'}}>• Remind this code well.</Text>
             </View>
           </View>
         </View>
