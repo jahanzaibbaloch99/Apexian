@@ -104,7 +104,7 @@ const Step2 = props => {
               colors={Colors.primaryGradient}
               end={{x: 1, y: 0}}
               start={{x: 0, y: 0}}>
-              {`${' Phrase'}`}
+              {`${'Phrase'}`}
             </GradientText>
           </View>
           <View
@@ -148,7 +148,7 @@ const Step2 = props => {
                     borderRadius: 5,
                   }}>
                   <View>
-                    <View style={{flexDirection: 'row', }}>
+                    <View style={{flexDirection: 'row'}}>
                       <View
                         style={{
                           flex: 1,

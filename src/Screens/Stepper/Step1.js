@@ -5,6 +5,7 @@ import GradientText from '../../Components/GradientText';
 import Colors from '../../Themes/Colors';
 import CommonStyles from '../../CommonStyles';
 import AppButton from '../../Components/AppButton';
+
 const Step1 = props => {
   return (
     <View style={style.container}>
@@ -49,7 +50,7 @@ const Step1 = props => {
               colors={Colors.primaryGradient}
               end={{x: 1, y: 0}}
               start={{x: 0, y: 0}}>
-              {` ${'Wallet'}`}
+              {`${" Wallet"}`}
             </GradientText>
           </View>
           <View
