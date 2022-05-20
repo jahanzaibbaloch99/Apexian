@@ -7,6 +7,7 @@ import Colors from '../../Themes/Colors';
 import CommonStyles from '../../CommonStyles';
 import AppButton from '../../Components/AppButton';
 import TextInputField from '../../Components/TextInput';
+import {responsiveSpacing} from '../../Utilities/Helpers';
 
 const Step3 = props => {
   return (
@@ -16,15 +17,15 @@ const Step3 = props => {
           justifyContent: 'space-between',
           flexGrow: 1,
         }}>
-        <View style={{paddingHorizontal: 50, flex: 1}}>
+        <View style={{paddingHorizontal: responsiveSpacing(50), flex: 1}}>
           <View
             style={{
               justifyContent: 'center',
               alignItems: 'center',
-              paddingTop: 70,
-              paddingBottom: 20,
+              paddingTop: responsiveSpacing(70),
+              paddingBottom: responsiveSpacing(20),
             }}>
-            <View style={{marginVertical: 10}}>
+            <View style={{marginVertical: responsiveSpacing(10)}}>
               <View style={{height: 35, width: 150}}>
                 <Image
                   style={{
@@ -43,17 +44,20 @@ const Step3 = props => {
                 alignItems: 'center',
                 alignContent: 'center',
                 flexDirection: 'row',
-                marginTop: 10,
+                marginTop: responsiveSpacing(10),
               }}>
               <Text
                 style={[
-                  {fontSize: 20, color: 'white'},
+                  {fontSize: responsiveSpacing(20), color: 'white'},
                   CommonStyles.fontMedium500,
                 ]}>
                 Enter your Secret
               </Text>
               <GradientText
-                style={[CommonStyles.fontMedium500, {fontSize: 20}]}
+                style={[
+                  CommonStyles.fontMedium500,
+                  {fontSize: responsiveSpacing(20)},
+                ]}
                 colors={Colors.secondaryGradient}
                 end={{x: 1, y: 0}}
                 start={{x: 0, y: 0}}>
@@ -62,7 +66,10 @@ const Step3 = props => {
             </View>
             <View>
               <GradientText
-                style={[CommonStyles.fontMedium500, {fontSize: 20}]}
+                style={[
+                  CommonStyles.fontMedium500,
+                  {fontSize: responsiveSpacing(20)},
+                ]}
                 colors={Colors.secondaryGradient}
                 end={{x: 1, y: 0}}
                 start={{x: 0, y: 0}}>
@@ -73,11 +80,15 @@ const Step3 = props => {
               style={{
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginTop: 10,
+                marginTop: responsiveSpacing(10),
               }}>
               <Text
                 style={[
-                  {color: 'white', textAlign: 'center', fontSize: 13},
+                  {
+                    color: 'white',
+                    textAlign: 'center',
+                    fontSize: responsiveSpacing(13),
+                  },
                   CommonStyles.fontRegular400,
                 ]}>
                 Enter your 12 phrase code you just got from your wallet.
@@ -91,57 +102,85 @@ const Step3 = props => {
               // alignItems: 'center',
               // alignContent: 'center',
             }}>
-            <View style={{flexDirection: 'row', marginVertical: 10}}>
-              <View style={{flex: 1, marginHorizontal: 10}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginVertical: responsiveSpacing(10),
+              }}>
+              <View style={{flex: 1, marginHorizontal: responsiveSpacing(10)}}>
                 <TextInputField number={'1'} placeholder="Secret" />
               </View>
-              <View style={{flex: 1, marginHorizontal: 10}}>
+              <View style={{flex: 1, marginHorizontal: responsiveSpacing(10)}}>
                 <TextInputField number={'2'} placeholder="Secret" />
               </View>
             </View>
-            <View style={{flexDirection: 'row', marginVertical: 10}}>
-              <View style={{flex: 1, marginHorizontal: 10}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginVertical: responsiveSpacing(10),
+              }}>
+              <View style={{flex: 1, marginHorizontal: responsiveSpacing(10)}}>
                 <TextInputField number={'3'} placeholder="Secret" />
               </View>
-              <View style={{flex: 1, marginHorizontal: 10}}>
+              <View style={{flex: 1, marginHorizontal: responsiveSpacing(10)}}>
                 <TextInputField number={'4'} placeholder="Secret" />
               </View>
             </View>
-            <View style={{flexDirection: 'row', marginVertical: 10}}>
-              <View style={{flex: 1, marginHorizontal: 10}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginVertical: responsiveSpacing(10),
+              }}>
+              <View style={{flex: 1, marginHorizontal: responsiveSpacing(10)}}>
                 <TextInputField number={'5'} placeholder="Secret" />
               </View>
-              <View style={{flex: 1, marginHorizontal: 10}}>
+              <View style={{flex: 1, marginHorizontal: responsiveSpacing(10)}}>
                 <TextInputField number={'6'} placeholder="Secret" />
               </View>
             </View>
-            <View style={{flexDirection: 'row', marginVertical: 10}}>
-              <View style={{flex: 1, marginHorizontal: 10}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginVertical: responsiveSpacing(10),
+              }}>
+              <View style={{flex: 1, marginHorizontal: responsiveSpacing(10)}}>
                 <TextInputField number={'7'} placeholder="Secret" />
               </View>
-              <View style={{flex: 1, marginHorizontal: 10}}>
+              <View style={{flex: 1, marginHorizontal: responsiveSpacing(10)}}>
                 <TextInputField number={'8'} placeholder="Secret" />
               </View>
             </View>
-            <View style={{flexDirection: 'row', marginVertical: 10}}>
-              <View style={{flex: 1, marginHorizontal: 10}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginVertical: responsiveSpacing(10),
+              }}>
+              <View style={{flex: 1, marginHorizontal: responsiveSpacing(10)}}>
                 <TextInputField number={'9'} placeholder="Secret" />
               </View>
-              <View style={{flex: 1, marginHorizontal: 10}}>
+              <View style={{flex: 1, marginHorizontal: responsiveSpacing(10)}}>
                 <TextInputField number={'10'} placeholder="Secret" />
               </View>
             </View>
-            <View style={{flexDirection: 'row', marginVertical: 10}}>
-              <View style={{flex: 1, marginHorizontal: 10}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginVertical: responsiveSpacing(10),
+              }}>
+              <View style={{flex: 1, marginHorizontal: responsiveSpacing(10)}}>
                 <TextInputField number={'11'} placeholder="Secret" />
               </View>
-              <View style={{flex: 1, marginHorizontal: 10}}>
+              <View style={{flex: 1, marginHorizontal: responsiveSpacing(10)}}>
                 <TextInputField number={'12'} placeholder="Secret" />
               </View>
             </View>
           </View>
         </View>
-        <View style={{marginHorizontal: 20, marginBottom: 20}}>
+        <View
+          style={{
+            marginHorizontal: responsiveSpacing(20),
+            marginBottom: responsiveSpacing(20),
+          }}>
           <AppButton
             onPress={() => {
               props.navigation.navigate('PinScreen');

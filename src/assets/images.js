@@ -10,4 +10,5 @@ export default {
   icon2: require('./images/iconconversation.png'),
   icon3: require('./images/iconround.png'),
   icon4: require('./images/iconplasma.png'),
+  apexianlogo:require("./images/apexianlogo.png")
 };

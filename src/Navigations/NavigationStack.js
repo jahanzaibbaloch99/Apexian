@@ -7,20 +7,21 @@ import Step2 from '../Screens/Stepper/Step2';
 import Step3 from '../Screens/Stepper/Step3';
 import PinScreen from '../Screens/Stepper/PinScreen';
 import IntroSlider from '../Screens/Stepper/IntroSlider';
-
+import LoginScreen from '../Screens/Stepper/LogoScreen';
 const Stack = createNativeStackNavigator();
 
 const NavigationStack = () => {
   return (
     <NavigationContainer ref={setNavigationRef}>
       <Stack.Navigator
-        initialRouteName="IntroSlider"
+        initialRouteName="Step1"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="PinScreen" component={PinScreen} />
         <Stack.Screen name="Step1" component={Step1} />
         <Stack.Screen name="Step2" component={Step2} />
         <Stack.Screen name="Step3" component={Step3} />
         <Stack.Screen name="IntroSlider" component={IntroSlider} />
+        <Stack.Screen name="LoginScreen" component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -6,6 +6,7 @@ import GradientText from '../../Components/GradientText';
 import Colors from '../../Themes/Colors';
 import CommonStyles from '../../CommonStyles';
 import AppButton from '../../Components/AppButton';
+import { responsiveSpacing } from '../../Utilities/Helpers';
 const Arr = [
   {
     name: '2331',
@@ -47,7 +48,7 @@ const Arr = [
 const Step2 = props => {
   return (
     <View style={style.container}>
-      <View style={{paddingHorizontal: 50, flex: 1}}>
+      <View style={{paddingHorizontal :responsiveSpacing(50), flex: 1}}>
         <View
           style={{
             justifyContent: 'center',
@@ -55,7 +56,7 @@ const Step2 = props => {
             paddingTop: 70,
             paddingBottom: 20,
           }}>
-          <View style={{marginVertical: 10}}>
+          <View style={{marginVertical:responsiveSpacing(10)}}>
             <View style={{height: 35, width: 150}}>
               <Image
                 style={{
@@ -74,10 +75,10 @@ const Step2 = props => {
               alignItems: 'center',
               alignContent: 'center',
               flexDirection: 'row',
-              marginTop: 10,
+              marginTop: responsiveSpacing(10) ,
             }}>
             <GradientText
-              style={[CommonStyles.fontMedium500, {fontSize: 20}]}
+              style={[CommonStyles.fontMedium500, {fontSize:responsiveSpacing(20)}]}
               colors={Colors.primaryGradient}
               end={{x: 1, y: 0}}
               start={{x: 0, y: 0}}>
@@ -85,13 +86,13 @@ const Step2 = props => {
             </GradientText>
             <Text
               style={[
-                {fontSize: 20, color: 'white'},
+                {fontSize:responsiveSpacing(20), color: 'white'},
                 CommonStyles.fontMedium500,
               ]}>
               down
             </Text>
             <GradientText
-              style={[CommonStyles.fontMedium500, {fontSize: 20}]}
+              style={[CommonStyles.fontMedium500, {fontSize:responsiveSpacing(20)}]}
               colors={Colors.primaryGradient}
               end={{x: 1, y: 0}}
               start={{x: 0, y: 0}}>
@@ -100,7 +101,7 @@ const Step2 = props => {
           </View>
           <View>
             <GradientText
-              style={[CommonStyles.fontMedium500, {fontSize: 20}]}
+              style={[CommonStyles.fontMedium500, {fontSize: responsiveSpacing(20)}]}
               colors={Colors.primaryGradient}
               end={{x: 1, y: 0}}
               start={{x: 0, y: 0}}>
@@ -111,11 +112,11 @@ const Step2 = props => {
             style={{
               justifyContent: 'center',
               alignItems: 'center',
-              marginTop: 10,
+              marginTop: responsiveSpacing(10),
             }}>
             <Text
               style={[
-                {color: 'white', textAlign: 'center', fontSize: 13},
+                {color: 'white', textAlign: 'center', fontSize: responsiveSpacing(13)},
                 CommonStyles.fontRegular400,
               ]}>
               This your secret Recovery Phrase. Write it down on a paper and
@@ -140,11 +141,11 @@ const Step2 = props => {
                 <View
                   style={{
                     flex: 1,
-                    marginHorizontal: 10,
-                    paddingHorizontal: 15,
-                    paddingVertical: 15,
+                    marginHorizontal:responsiveSpacing(10),
+                    paddingHorizontal:responsiveSpacing(15),
+                    paddingVertical: responsiveSpacing(15),
                     backgroundColor: '#202429',
-                    marginVertical: 5,
+                    marginVertical: responsiveSpacing(7),
                     borderRadius: 5,
                   }}>
                   <View>

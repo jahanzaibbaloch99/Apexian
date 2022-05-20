@@ -1,10 +1,17 @@
 import React from 'react';
-import {View, Text, ImageBackground, Image} from 'react-native';
+import {
+  View,
+  Text,
+  ImageBackground,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import {StyleSheet} from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import images from '../../assets/images';
 import CommonStyles from '../../CommonStyles';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {responsiveSpacing} from '../../Utilities/Helpers';
 
 const slides = [
   {
@@ -46,7 +53,10 @@ const IntroSlider = props => {
         dotStyle={{backgroundColor: '#45474C'}}
         renderDoneButton={() => {
           return (
-            <View
+            <TouchableOpacity
+              onPress={() => {
+                props.navigation.navigate('LoginScreen');
+              }}
               style={{
                 width: 50,
                 height: 50,
@@ -60,7 +70,7 @@ const IntroSlider = props => {
                 color="rgba(255, 255, 255, .9)"
                 size={24}
               />
-            </View>
+            </TouchableOpacity>
           );
         }}
         renderItem={({item}) => {
@@ -88,22 +98,26 @@ const IntroSlider = props => {
                   flex: 1,
                   justifyContent: 'center',
                   alignItems: 'center',
-                  paddingHorizontal: 30,
+                  paddingHorizontal: responsiveSpacing(30),
                 }}>
                 <View>
                   <Text
                     style={[
                       CommonStyles.fontSemiBold600,
-                      {color: 'white', fontSize: 24},
+                      {color: 'white', fontSize: responsiveSpacing(24)},
                     ]}>
                     {item.title.toUpperCase()}
                   </Text>
                 </View>
-                <View style={{marginVertical: 10}}>
+                <View style={{marginVertical: responsiveSpacing(10)}}>
                   <Text
                     style={[
                       CommonStyles.fontMedium500,
-                      {color: 'white', fontSize: 16, textAlign: 'center'},
+                      {
+                        color: 'white',
+                        fontSize: responsiveSpacing(16),
+                        textAlign: 'center',
+                      },
                     ]}>
                     {item.text}
                   </Text>

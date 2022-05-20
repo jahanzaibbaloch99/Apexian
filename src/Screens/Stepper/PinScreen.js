@@ -9,6 +9,7 @@ import {
 import CommonStyles from '../../CommonStyles';
 import Colors from '../../Themes/Colors';
 import AppButton from '../../Components/AppButton';
+import { responsiveSpacing } from '../../Utilities/Helpers';
 const PinScreen = props => {
   const [pin, setPin] = useState([]);
   const onPressed = number => {
@@ -33,20 +34,20 @@ const PinScreen = props => {
         keyboardShouldPersistTaps="handled">
         <View style={{flex: 1}} />
         <View style={styles.pinEntryWrapper}>
-          <View style={{marginVertical: 5}}>
+          <View style={{marginVertical: responsiveSpacing(5)}}>
             <Text
               style={[
                 CommonStyles.fontMedium500,
-                {fontSize: 20, color: 'white'},
+                {fontSize:responsiveSpacing(20), color: 'white'},
               ]}>
               Secured Wallet
             </Text>
           </View>
-          <View style={{marginVertical: 5}}>
+          <View style={{marginVertical: responsiveSpacing(5)}}>
             <Text
               style={[
                 CommonStyles.fontRegular400,
-                {fontSize: 16, color: '#45474C'},
+                {fontSize: responsiveSpacing(16), color: '#45474C'},
               ]}>
               Enter Your Passcode
             </Text>
@@ -140,7 +141,7 @@ const PinScreen = props => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={{paddingHorizontal: 20}}>
+        <View style={{paddingHorizontal:responsiveSpacing(20) }}>
           <AppButton
             onPress={() => {
               props.navigation.navigate('IntroSlider');
@@ -163,13 +164,13 @@ const styles = StyleSheet.create({
   pinEntryButtonText: {
     ...CommonStyles.fontRegular400,
     color: 'white',
-    fontSize: 32,
+    fontSize: responsiveSpacing(32),
   },
   contentContainer: {
     alignContent: 'center',
     justifyContent: 'center',
     flexGrow: 1,
-    padding: 10,
+    padding: responsiveSpacing(10),
   },
   container: {
     flex: 1,
@@ -187,9 +188,9 @@ const styles = StyleSheet.create({
   pinEntryButton: {
     // width: 40,
     // height: 40,
-    paddingHorizontal: 40,
-    paddingVertical: 10,
-    marginVertical: 20,
+    paddingHorizontal: responsiveSpacing(35),
+    paddingVertical: responsiveSpacing(10),
+    marginVertical:responsiveSpacing(15),
     borderRadius: 20,
     // margin: 5,
     alignItems: 'center',
@@ -203,24 +204,24 @@ const styles = StyleSheet.create({
 
   pinContainer: {
     flexDirection: 'row',
-    marginVertical: 15,
+    marginVertical: responsiveSpacing(15),
   },
   pinValue: {
-    paddingHorizontal: 7,
-    paddingVertical: 7,
+    paddingHorizontal: responsiveSpacing(7),
+    paddingVertical: responsiveSpacing(7),
     borderRadius: 50,
     backgroundColor: '#45474C',
-    marginHorizontal: 15,
+    marginHorizontal:responsiveSpacing(15),
   },
   filled: {
     backgroundColor: '#45474C',
   },
   button: {
-    marginTop: 20,
+    marginTop: responsiveSpacing(20),
   },
   cancelButton: {
-    marginTop: 5,
-    marginBottom: 10,
+    marginTop: responsiveSpacing(5),
+    marginBottom: responsiveSpacing(10),
   },
   buttonsContainer: {
     alignItems: 'center',
