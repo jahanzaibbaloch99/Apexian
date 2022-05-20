@@ -10,5 +10,9 @@ export default {
   icon2: require('./images/iconconversation.png'),
   icon3: require('./images/iconround.png'),
   icon4: require('./images/iconplasma.png'),
-  apexianlogo:require("./images/apexianlogo.png")
+  apexianlogo:require("./images/apexianlogo.png"),
+  home:require("./images/home.png"),
+  homefocus:require("./images/homefocus.png"),
+  setting:require("./images/setting.png"),
+  settingfocus:require("./images/settingfocus.png"),
 };
