@@ -30,7 +30,7 @@ const AppButton = ({
       // angleCenter={{x: 0.6, y: 0.2}}
       useAngle={true}
       angle={260}
-      colors={Colors.primaryGradient}>
+      colors={gradientColor}>
       <View style={[styles.appButtonContainer, containerStyles]}>
         <View>
           {iconOnly ? (

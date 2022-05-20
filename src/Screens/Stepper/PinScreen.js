@@ -8,8 +8,8 @@ import {
 } from 'react-native';
 import CommonStyles from '../../CommonStyles';
 import Colors from '../../Themes/Colors';
-
-const PinScreen = () => {
+import AppButton from '../../Components/AppButton';
+const PinScreen = props => {
   const [pin, setPin] = useState([]);
   const onPressed = number => {
     let pinState = pin;
@@ -139,6 +139,15 @@ const PinScreen = () => {
               </View>
             </TouchableOpacity>
           </View>
+        </View>
+        <View style={{paddingHorizontal: 20}}>
+          <AppButton
+            onPress={() => {
+              props.navigation.navigate('IntroSlider');
+            }}
+            gradientColor={['#45474C', '#45474C']}>
+            Forget Your Pin?
+          </AppButton>
         </View>
       </ScrollView>
     </View>

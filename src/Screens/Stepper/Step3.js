@@ -7,44 +7,7 @@ import Colors from '../../Themes/Colors';
 import CommonStyles from '../../CommonStyles';
 import AppButton from '../../Components/AppButton';
 import TextInputField from '../../Components/TextInput';
-const Arr = [
-  {
-    name: '2331',
-  },
-  {
-    name: '2331',
-  },
-  {
-    name: '2331',
-  },
-  {
-    name: '2331',
-  },
-  {
-    name: '2331',
-  },
-  {
-    name: '2331',
-  },
-  {
-    name: '2331',
-  },
-  {
-    name: '2331',
-  },
-  {
-    name: '2331',
-  },
-  {
-    name: '2331',
-  },
-  {
-    name: '2331',
-  },
-  {
-    name: '2331',
-  },
-];
+
 const Step3 = props => {
   return (
     <View style={style.container}>
@@ -181,7 +144,7 @@ const Step3 = props => {
         <View style={{marginHorizontal: 20, marginBottom: 20}}>
           <AppButton
             onPress={() => {
-              props.navigation.navigate('Step3');
+              props.navigation.navigate('PinScreen');
             }}>
             Secure Your Wallet
           </AppButton>
