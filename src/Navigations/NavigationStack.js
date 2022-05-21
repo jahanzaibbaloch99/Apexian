@@ -13,7 +13,7 @@ const Stack = createNativeStackNavigator();
 
 const NavigationStack = () => {
   return (
-    <NavigationContainer ref={setNavigationRef}>
+    <NavigationContainer theme={{colors: '#000'}} ref={setNavigationRef}>
       <Stack.Navigator
         initialRouteName="Home"
         screenOptions={{headerShown: false}}>

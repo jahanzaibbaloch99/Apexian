@@ -5,7 +5,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 const GradientText = props => {
   return (
-    <MaskedView androidRenderingMode='software' maskElement={<Text {...props} />}>
+    <MaskedView maskElement={<Text {...props} />}>
       <LinearGradient colors={props.colors} start={props.start} end={props.end}>
         <Text style={[props.style, {opacity: 0}]}>{props.children}</Text>
       </LinearGradient>
