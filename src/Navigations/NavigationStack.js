@@ -9,6 +9,16 @@ import PinScreen from '../Screens/Stepper/PinScreen';
 import IntroSlider from '../Screens/Stepper/IntroSlider';
 import LoginScreen from '../Screens/Stepper/LogoScreen';
 import BottomStack from './BottomNavigation';
+import Nft from '../Screens/Settings/Nft';
+import Receive from '../Screens/Settings/Receive';
+import Send from '../Screens/Settings/Send';
+import Stacking from '../Screens/Settings/Stacking';
+import Swap from '../Screens/Settings/Swap';
+import Trade from '../Screens/Settings/Trade';
+import Setting from '../Screens/Settings/Setting';
+import Security from '../Screens/Settings/Security';
+import Biometric from '../Screens/Settings/Biometric';
+import GeneralSetting from '../Screens/Settings/GeneralSetting';
 const Stack = createNativeStackNavigator();
 
 const NavigationStack = () => {
@@ -24,6 +34,16 @@ const NavigationStack = () => {
         <Stack.Screen name="IntroSlider" component={IntroSlider} />
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="Home" component={BottomStack} />
+        <Stack.Screen name="Nft" component={Nft} />
+        <Stack.Screen name="Setting" component={Setting} />
+        <Stack.Screen name="Trade" component={Trade} />
+        <Stack.Screen name="Send" component={Send} />
+        <Stack.Screen name="Stacking" component={Stacking} />
+        <Stack.Screen name="Swap" component={Swap} />
+        <Stack.Screen name="Biometric" component={Biometric} />
+        <Stack.Screen name="Security" component={Security} />
+        <Stack.Screen name="Receive" component={Receive} />
+        <Stack.Screen name="GeneralSetting" component={GeneralSetting} />
       </Stack.Navigator>
     </NavigationContainer>
   );

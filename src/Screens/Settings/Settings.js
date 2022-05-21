@@ -47,6 +47,7 @@ const Settings = props => {
                   marginBottom: responsiveSpacing(10),
                   padding: responsiveSpacing(10),
                   paddingVertical: responsiveSpacing(20),
+                  borderRadius: 10,
                 }}>
                 <View style={{paddingHorizontal: responsiveSpacing(10)}}>
                   <View style={{height: 24, width: 24}}>

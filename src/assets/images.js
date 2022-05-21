@@ -29,4 +29,8 @@ export default {
   btc2: require('./images/btc2.png'),
   btc1: require('./images/btc1.png'),
   back: require('./images/back.png'),
+  finger: require('./images/finger.png'),
+  security: require('./images/security.png'),
+  general: require('./images/general.png'),
+  support: require('./images/support.png'),
 };
