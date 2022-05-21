@@ -21,6 +21,9 @@ const Settings = props => {
         }}>
         <View style={{flexDirection: 'row', justifyContent: 'flex-end'}}>
           <TouchableOpacity
+            onPress={() => {
+              props.navigation.navigate('Setting');
+            }}
             style={{
               padding: responsiveSpacing(10),
               backgroundColor: '#45474C',

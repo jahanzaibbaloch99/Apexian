@@ -9,7 +9,7 @@ import {
 import CommonStyles from '../../CommonStyles';
 import Colors from '../../Themes/Colors';
 import AppButton from '../../Components/AppButton';
-import { responsiveSpacing } from '../../Utilities/Helpers';
+import {responsiveSpacing} from '../../Utilities/Helpers';
 const PinScreen = props => {
   const [pin, setPin] = useState([]);
   const onPressed = number => {
@@ -38,7 +38,7 @@ const PinScreen = props => {
             <Text
               style={[
                 CommonStyles.fontMedium500,
-                {fontSize:responsiveSpacing(20), color: 'white'},
+                {fontSize: responsiveSpacing(20), color: 'white'},
               ]}>
               Secured Wallet
             </Text>
@@ -141,10 +141,10 @@ const PinScreen = props => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={{paddingHorizontal:responsiveSpacing(20) }}>
+        <View style={{paddingHorizontal: responsiveSpacing(20)}}>
           <AppButton
             onPress={() => {
-              props.navigation.navigate('IntroSlider');
+              props.navigation.navigate('Home');
             }}
             gradientColor={['#45474C', '#45474C']}>
             Forget Your Pin?
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
     // height: 40,
     paddingHorizontal: responsiveSpacing(35),
     paddingVertical: responsiveSpacing(10),
-    marginVertical:responsiveSpacing(15),
+    marginVertical: responsiveSpacing(15),
     borderRadius: 20,
     // margin: 5,
     alignItems: 'center',
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
     paddingVertical: responsiveSpacing(7),
     borderRadius: 50,
     backgroundColor: '#45474C',
-    marginHorizontal:responsiveSpacing(15),
+    marginHorizontal: responsiveSpacing(15),
   },
   filled: {
     backgroundColor: '#45474C',

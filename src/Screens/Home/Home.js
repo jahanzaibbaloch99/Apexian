@@ -28,7 +28,7 @@ const Arr2 = [
   {image: images.btc1, name: 'BTC', price: '0.83932 USD'},
   {image: images.btc2, name: 'BTC', price: '0.83932 USD'},
 ];
-const Home = () => {
+const Home = (props) => {
   const [ind, setind] = useState(0);
   return (
     <View style={{backgroundColor: '#000', flex: 1}}>
@@ -39,6 +39,9 @@ const Home = () => {
         }}>
         <View style={{flexDirection: 'row', justifyContent: 'flex-end'}}>
           <TouchableOpacity
+            onPress={() => {
+              props.navigation.navigate('Setting');
+            }}
             style={{
               padding: responsiveSpacing(10),
               backgroundColor: '#45474C',
