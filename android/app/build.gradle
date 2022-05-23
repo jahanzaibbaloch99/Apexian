@@ -264,6 +264,9 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation project(':react-native-vector-icons')
     //noinspection GradleDynamicVersion
+        implementation project(':react-native-splash-screen')
+            implementation "androidx.core:core-splashscreen:1.0.0-beta01" // Add this line
+
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation project(':react-native-svg')
 

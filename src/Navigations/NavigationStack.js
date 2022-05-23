@@ -19,11 +19,18 @@ import Setting from '../Screens/Settings/Setting';
 import Security from '../Screens/Settings/Security';
 import Biometric from '../Screens/Settings/Biometric';
 import GeneralSetting from '../Screens/Settings/GeneralSetting';
+import RNBootSplash from 'react-native-bootsplash';
+
 const Stack = createNativeStackNavigator();
 
 const NavigationStack = () => {
   return (
-    <NavigationContainer theme={{colors: '#000'}} ref={setNavigationRef}>
+    <NavigationContainer
+      onReady={() => {
+        RNBootSplash.hide({fade: true});
+      }}
+      theme={{colors: '#000'}}
+      ref={setNavigationRef}>
       <Stack.Navigator
         initialRouteName="IntroSlider"
         screenOptions={{headerShown: false}}>
