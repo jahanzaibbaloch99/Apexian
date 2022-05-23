@@ -65,7 +65,7 @@ const Settings = props => {
                     marginHorizontal: responsiveSpacing(10),
                     justifyContent: 'center',
                   }}>
-                  <Text style={[CommonStyles.fontRegular400]}>{ele.title}</Text>
+                  <Text style={[CommonStyles.fontRegular400,{color:"white"}]}>{ele.title}</Text>
                 </View>
               </TouchableOpacity>
             );

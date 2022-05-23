@@ -35,7 +35,7 @@ const Swap = () => {
             flexDirection: 'row-reverse',
             marginVertical: responsiveSpacing(5),
           }}>
-          <Text style={[CommonStyles.fontMedium500, {fontSize: 11}]}>
+          <Text style={[CommonStyles.fontMedium500, {fontSize: 11,color:"white"}]}>
             Balance: 0.03030 ETH
           </Text>
         </View>

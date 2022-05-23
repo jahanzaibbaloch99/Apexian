@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {
   TouchableOpacity,
   View,
@@ -9,8 +9,9 @@ import {
   Image,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import {Fonts} from '../Themes';
-import SearchInput from './SearchInput';
+import {responsiveSpacing} from '../Utilities/Helpers';
+import images from '../assets/images';
+import CommonStyles from '../CommonStyles';
 const DropdownPopup = ({
   modalShow,
   setModalShow,
@@ -27,65 +28,56 @@ const DropdownPopup = ({
   return (
     <View>
       <View style={{margin: 5}}>{isHeading && <Text>{title}</Text>}</View>
-      <View
+      <TouchableOpacity
+        onPress={() => setModalShow(true)}
         style={{
-          flexDirection: 'row',
-          paddingVertical: 10,
           backgroundColor: 'rgba(255,255,255, 0.1)',
+          paddingHorizontal: responsiveSpacing(15),
+          paddingVertical: responsiveSpacing(20),
           borderRadius: 10,
+          flexDirection: 'row',
         }}>
-        <TouchableOpacity
-          onPress={() => setModalShow(true)}
-          style={[
-            {
-              paddingVertical: 10,
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            },
-            touchableStyle,
-          ]}>
-          <View style={{marginHorizontal: 15}}>
-            <View style={{height: 48, width: 48}}>
-              <Image
-                source={selectedItem?.image}
-                style={{flex: 1, height: undefined, width: undefined}}
-              />
-            </View>
-          </View>
-          <View>
-            <Text style={{color:"white"}}>{selectedItem?.name}</Text>
-          </View>
-          {/* <View>
-            <Text style={{color: 'black'}}>{selectedItem || placeHolder}</Text>
-          </View> */}
-          <View style={{marginHorizontal: 10}}>
-            <Icon name="angle-down" color="#aaa" size={15} />
-          </View>
-        </TouchableOpacity>
         <View
           style={{
-            flexDirection: 'row',
-            paddingVertical: 15,
-            marginHorizontal: 10,
+            marginHorizontal: responsiveSpacing(10),
+            justifyContent: 'center',
           }}>
-          <View
-            style={{
-              paddingHorizontal: 1,
-              backgroundColor: 'rgba(255,255,255, 0.2)',
-            }}
-          />
+          <View style={{height: 40, width: 40}}>
+            <Image
+              source={images.btc2}
+              style={{flex: 1, width: undefined, height: undefined}}
+            />
+          </View>
+        </View>
+        <View style={{flex: 1, justifyContent: 'center'}}>
+          <View>
+            <Text
+              style={[
+                CommonStyles.fontRegular400,
+                {fontSize: 14, color: 'white'},
+              ]}>
+              BTC
+            </Text>
+          </View>
+          <View>
+            <Text
+              style={[
+                CommonStyles.fontRegular400,
+                {fontSize: 13, color: 'white'},
+              ]}>
+              0.09346478 USD
+            </Text>
+          </View>
         </View>
         <View
-          style={{justifyContent: 'center', flex: 1, paddingHorizontal: 10}}>
-          <SearchInput
-            style={{backgroundColor: 'rgba(255,255,255, 0.0)'}}
-            inputStyle={{paddingLeft: 0, color: 'white'}}
-            placeholder="Type"
-          />
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginHorizontal: responsiveSpacing(10),
+          }}>
+          <Icon name="angle-down" color="#aaa" size={20} />
         </View>
-      </View>
-
+      </TouchableOpacity>
       <Modal visible={modalShow} transparent={true}>
         <View
           activeOpacity={1}
@@ -109,7 +101,7 @@ const DropdownPopup = ({
                 flexDirection: 'row',
                 justifyContent: 'space-between',
               }}>
-              <Text style={{color:"white"}}>{title}</Text>
+              <Text>{title}</Text>
               <TouchableOpacity
                 style={{marginHorizontal: 10}}
                 onPress={() => setModalShow(false)}

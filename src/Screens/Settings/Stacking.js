@@ -80,7 +80,7 @@ const Stacking = () => {
             justifyContent: 'space-between',
           }}>
           <View style={{paddingVertical: responsiveSpacing(15)}}>
-            <Text style={[CommonStyles.fontRegular400, {fontSize: 12}]}>
+            <Text style={[CommonStyles.fontRegular400, {fontSize: 12,color:"white"}]}>
               SUMMARY
             </Text>
           </View>
@@ -111,12 +111,12 @@ const Stacking = () => {
             </View>
           </View>
           <View style={{flex: 1}}>
-            <Text style={[CommonStyles.fontRegular400, {fontSize: 12}]}>
+            <Text style={[CommonStyles.fontRegular400, {fontSize: 12,color:"white"}]}>
               Subscription date
             </Text>
           </View>
           <View>
-            <Text style={[CommonStyles.fontRegular400, {fontSize: 12}]}>
+            <Text style={[CommonStyles.fontRegular400, {fontSize: 12,color:"white"}]}>
               2022-05-20 21:45
             </Text>
           </View>
@@ -149,12 +149,12 @@ const Stacking = () => {
             </View>
           </View>
           <View style={{flex: 1}}>
-            <Text style={[CommonStyles.fontRegular400, {fontSize: 12}]}>
+            <Text style={[CommonStyles.fontRegular400, {fontSize: 12,color:"white"}]}>
               Value date
             </Text>
           </View>
           <View>
-            <Text style={[CommonStyles.fontRegular400, {fontSize: 12}]}>
+            <Text style={[CommonStyles.fontRegular400, {fontSize: 12,color:"white"}]}>
               2022-05-20 21:45
             </Text>
           </View>
@@ -176,12 +176,12 @@ const Stacking = () => {
             />
           </View>
           <View style={{flex: 1}}>
-            <Text style={[CommonStyles.fontRegular400, {fontSize: 12}]}>
+            <Text style={[CommonStyles.fontRegular400, {fontSize: 12,color:"white"}]}>
               Stacking date
             </Text>
           </View>
           <View>
-            <Text style={[CommonStyles.fontRegular400, {fontSize: 12}]}>
+            <Text style={[CommonStyles.fontRegular400, {fontSize: 12,color:"white"}]}>
               2022-05-20 21:45
             </Text>
           </View>
@@ -206,7 +206,7 @@ const Stacking = () => {
                 value={toggleCheckBox}
                 onValueChange={newValue => setToggleCheckBox(newValue)}
               />
-              <Text style={[CommonStyles.fontRegular400]}>I have read the</Text>
+              <Text style={[CommonStyles.fontRegular400 , {color:"white"}]}>I have read the</Text>
             </View>
 
             <TouchableOpacity

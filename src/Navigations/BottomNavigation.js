@@ -14,14 +14,14 @@ const BottomStack = () => {
         headerShown: false,
         tabBarShowLabel: false,
         tabBarStyle: {
-          backgroundColor: '#45474C',
+          backgroundColor: 'rgba(255,255,255, 0.1)',
           position: 'absolute',
           bottom: 25,
           left: 20,
           right: 20,
           height: 75,
           borderRadius: 15,
-          borderTopColor:"#000"
+          borderTopColor: '#000',
         },
         tabBarIcon: ({focused, color, size}) => {
           let iconName;

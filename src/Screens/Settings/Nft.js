@@ -49,7 +49,7 @@ const Nft = () => {
                 <Text
                   style={[
                     CommonStyles.fontRegular400,
-                    {fontSize: responsiveSpacing(16)},
+                    {fontSize: responsiveSpacing(16),color:"white"},
                   ]}>
                   {ele.name}
                 </Text>

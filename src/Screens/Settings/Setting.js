@@ -75,7 +75,7 @@ const Setting = props => {
                   justifyContent: 'center',
                 }}>
                 <View>
-                  <Text style={[CommonStyles.fontRegular400, {fontSize: 16}]}>
+                  <Text style={[CommonStyles.fontRegular400, {fontSize: 16,color:"white"}]}>
                     {ele.name}
                   </Text>
                 </View>
@@ -83,7 +83,7 @@ const Setting = props => {
                   style={{
                     justifyContent: 'center',
                   }}>
-                  <Text style={[CommonStyles.fontRegular400, {fontSize: 12}]}>
+                  <Text style={[CommonStyles.fontRegular400, {fontSize: 12,color:"white" , opacity:0.5}]}>
                     {ele.title}
                   </Text>
                 </View>

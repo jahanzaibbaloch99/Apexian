@@ -36,7 +36,7 @@ const Biometric = () => {
           <Text
             style={[
               CommonStyles.fontRegular400,
-              {fontSize: 18, textAlign: 'center'},
+              {fontSize: 18, textAlign: 'center',color:"white"},
             ]}>
             Login Using Fingerprint on your Phone
           </Text>
