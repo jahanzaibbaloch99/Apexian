@@ -144,7 +144,7 @@ const Step2 = props => {
                     marginHorizontal:responsiveSpacing(10),
                     paddingHorizontal:responsiveSpacing(15),
                     paddingVertical: responsiveSpacing(15),
-                    backgroundColor: '#202429',
+                    backgroundColor: 'rgba(255,255,255, 0.1)',
                     marginVertical: responsiveSpacing(7),
                     borderRadius: 5,
                   }}>

@@ -33,4 +33,6 @@ export default {
   security: require('./images/security.png'),
   general: require('./images/general.png'),
   support: require('./images/support.png'),
+  arrowswap: require('./images/arrowswap.png'),
+  qr: require('./images/qr.png'),
 };

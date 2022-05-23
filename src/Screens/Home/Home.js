@@ -28,7 +28,7 @@ const Arr2 = [
   {image: images.btc1, name: 'BTC', price: '0.83932 USD'},
   {image: images.btc2, name: 'BTC', price: '0.83932 USD'},
 ];
-const Home = (props) => {
+const Home = props => {
   const [ind, setind] = useState(0);
   return (
     <View style={{backgroundColor: '#000', flex: 1}}>
@@ -44,7 +44,7 @@ const Home = (props) => {
             }}
             style={{
               padding: responsiveSpacing(10),
-              backgroundColor: '#45474C',
+              backgroundColor: 'rgba(255,255,255, 0.2)',
               borderRadius: 50,
               marginRight: responsiveSpacing(10),
             }}>
@@ -58,7 +58,7 @@ const Home = (props) => {
           <TouchableOpacity
             style={{
               padding: responsiveSpacing(10),
-              backgroundColor: '#45474C',
+              backgroundColor: 'rgba(255,255,255, 0.2)',
               borderRadius: 50,
             }}>
             <View style={{width: 24, height: 24}}>
@@ -162,7 +162,14 @@ const Home = (props) => {
           </GradientView>
         </View>
         <View style={{marginVertical: responsiveSpacing(10)}}>
-          <SearchInput placeholder="Search Assets" />
+          <SearchInput
+            containerStyle={{
+              backgroundColor: 'rgba(255,255,255, 0.3)',
+              borderRadius: 10,
+              paddingVertical: 5,
+            }}
+            placeholder="Search Assets"
+          />
         </View>
         <View style={{marginVertical: responsiveSpacing(10)}}>
           {Arr2.map((ele, ind) => {
@@ -170,7 +177,7 @@ const Home = (props) => {
               <View
                 style={{
                   flexDirection: 'row',
-                  backgroundColor: '#202429',
+                  backgroundColor: 'rgba(255,255,255, 0.1)',
                   marginBottom: responsiveSpacing(10),
                   padding: responsiveSpacing(15),
                   borderRadius: 5,

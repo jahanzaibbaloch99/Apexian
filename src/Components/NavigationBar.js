@@ -27,7 +27,8 @@ const NavigationBar = props => {
         </TouchableOpacity>
       </View>
       <View style={{flex: 3, justifyContent: 'center', alignItems: 'center'}}>
-        <Text style={[CommonStyles.fontRegular400, {fontSize: 18}]}>
+        <Text
+          style={[CommonStyles.fontRegular400, {fontSize: 18, color: 'white'}]}>
           {props.title}
         </Text>
       </View>

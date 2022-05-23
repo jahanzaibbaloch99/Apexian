@@ -6,21 +6,12 @@ import Colors from '../Themes/Colors';
 const SearchInput = props => {
   return (
     <>
-      <View
-        style={{
-          backgroundColor: '#202429',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          borderRadius: 6,
-        }}>
-        <View style={styles.textInputcontainer}>
-          <TextInput
-            placeholderTextColor={'gray'}
-            style={[styles.textInput, props.inputStyle]}
-            {...props}
-          />
-        </View>
+      <View style={[styles.textInputcontainer, props.containerStyle]}>
+        <TextInput
+          placeholderTextColor={'gray'}
+          style={[styles.textInput, props.inputStyle]}
+          {...props}
+        />
       </View>
     </>
   );
@@ -36,11 +27,10 @@ const styles = StyleSheet.create({
   textInput: {
     ...CommonStyles.fontRegular400,
     fontSize: 13,
-    backgroundColor: Colors.white,
     paddingVertical: 10,
     flex: 1,
-    color: '#333333',
-    paddingLeft:20
+    color: 'white',
+    paddingLeft: 20,
   },
   errorText: {
     fontSize: 10,

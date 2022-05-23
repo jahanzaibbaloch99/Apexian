@@ -45,7 +45,7 @@ const Setting = props => {
               }}
               style={{
                 flexDirection: 'row',
-                backgroundColor: '#202429',
+                backgroundColor: 'rgba(255,255,255, 0.1)',
                 marginBottom: responsiveSpacing(10),
                 padding: responsiveSpacing(10),
                 // paddingHorizontal:

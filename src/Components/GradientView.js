@@ -8,7 +8,7 @@ const GradientView = (props) => {
   return (
     <LinearGradient
       style={props.style}
-      colors={Colors.primaryGradient}
+      colors={props?.gradientColor || Colors.primaryGradient}
       end={{x: 1, y: 0}}
       start={{x: 0, y: 0}}>
       {props.children}

@@ -26,7 +26,7 @@ const Settings = props => {
             }}
             style={{
               padding: responsiveSpacing(10),
-              backgroundColor: '#45474C',
+              backgroundColor: 'rgba(255,255,255, 0.2)',
               borderRadius: 50,
             }}>
             <View style={{width: 24, height: 24}}>
@@ -46,7 +46,7 @@ const Settings = props => {
                 }}
                 style={{
                   flexDirection: 'row',
-                  backgroundColor: '#202429',
+                  backgroundColor: 'rgba(255,255,255, 0.1)',
                   marginBottom: responsiveSpacing(10),
                   padding: responsiveSpacing(10),
                   paddingVertical: responsiveSpacing(20),

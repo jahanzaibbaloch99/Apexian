@@ -25,7 +25,7 @@ const NavigationStack = () => {
   return (
     <NavigationContainer theme={{colors: '#000'}} ref={setNavigationRef}>
       <Stack.Navigator
-        initialRouteName="IntroSlider"
+        initialRouteName="Send"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="PinScreen" component={PinScreen} />
         <Stack.Screen name="Step1" component={Step1} />

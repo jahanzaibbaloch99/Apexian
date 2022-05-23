@@ -22,15 +22,15 @@ const Nft = () => {
       </View>
       <View
         style={{
-          marginVertical: responsiveSpacing(25),
+          marginVertical: responsiveSpacing(20),
           flex: 1,
-          paddingHorizontal: responsiveSpacing(30),
+          paddingHorizontal: responsiveSpacing(20),
         }}>
         {Arr.map(ele => {
           return (
             <TouchableOpacity
               style={{
-                backgroundColor: '#202429',
+                backgroundColor: 'rgba(255,255,255, 0.1)',
                 marginBottom: responsiveSpacing(10),
                 paddingVertical: responsiveSpacing(15),
                 paddingHorizontal: responsiveSpacing(10),
