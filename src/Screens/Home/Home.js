@@ -25,7 +25,7 @@ const Arr = [
 
 const Arr2 = [
   {image: images.btc2, name: 'BTC', price: '0.83932 USD'},
-  {image: images.paydou, name: 'PAYDOU', price: '0.83932 USD'},
+  {image: images.paydou, name: 'PAYDOH', price: '0.83932 USD'},
   {image: images.vtcr, name: 'VTCR', price: '0.83932 USD'},
   {image: images.apex, name: 'APEX', price: '0.83932 USD'},
 ];
@@ -188,7 +188,10 @@ const Home = props => {
           <View style={{marginVertical: responsiveSpacing(10)}}>
             {Arr2.map((ele, ind) => {
               return (
-                <View
+                <TouchableOpacity
+                  onPress={() => {
+                    props.navigation.navigate('Trade');
+                  }}
                   style={{
                     flexDirection: 'row',
                     backgroundColor: 'rgba(255,255,255, 0.1)',
@@ -224,7 +227,7 @@ const Home = props => {
                       </Text>
                     </View>
                   </View>
-                </View>
+                </TouchableOpacity>
               );
             })}
           </View>

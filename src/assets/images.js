@@ -50,4 +50,6 @@ export default {
   paydou: require('./images/paydoh.png'),
   vtcr: require('./images/vtcr.png'),
   apex: require('./images/apex.png'),
+  qrcode: require('./images/qrcode.png'),
+  sharing: require('./images/sharing.png'),
 };

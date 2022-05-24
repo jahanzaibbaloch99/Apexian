@@ -8,6 +8,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import Dropdown from '../../Components/DropDown';
 import CommonStyles from '../../CommonStyles';
 import {LineChart} from 'react-native-chart-kit';
+import AppButton from '../../Components/AppButton';
 const arr = [
   {name: '1D'},
   {name: '7D'},
@@ -17,7 +18,7 @@ const arr = [
   {name: 'ALL'},
   {name: 'calendar-outline'},
 ];
-const Send = () => {
+const Send = props => {
   const [ind, setind] = useState(4);
   const [isModal, setIsModal] = useState(false);
   const [chartWidth, setchartWidth] = useState(null);
@@ -27,12 +28,10 @@ const Send = () => {
         <NavigationBar title={'Trade'} />
       </View>
       <View
-        onLayout={({nativeEvent}) => {
-          console.log(nativeEvent, 'EE');
-        }}
         style={{
           paddingHorizontal: responsiveSpacing(20),
           marginTop: responsiveSpacing(20),
+          flex: 1,
         }}>
         <View>
           <Dropdown modalShow={isModal} setModalShow={setIsModal} />
@@ -174,6 +173,29 @@ const Send = () => {
               );
             })}
           </View>
+        </View>
+      </View>
+      <View
+        style={{
+          paddingHorizontal: responsiveSpacing(25),
+          marginBottom: responsiveSpacing(10),
+        }}>
+        <View style={{marginVertical: responsiveSpacing(10)}}>
+          <AppButton
+            onPress={() => {
+              props.navigation.navigate('Send');
+            }}
+            gradientColor={['#45474C', '#45474C']}>
+            SEND
+          </AppButton>
+        </View>
+        <View style={{marginVertical: responsiveSpacing(10)}}>
+          <AppButton
+            onPress={() => {
+              props.navigation.navigate('Receive');
+            }}>
+            RECEIVE
+          </AppButton>
         </View>
       </View>
     </View>
